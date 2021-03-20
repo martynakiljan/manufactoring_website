@@ -1,28 +1,32 @@
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Home } from './Home';
+import { About } from './About';
+import { Contact } from './Contact';
+import { NoMatch } from './NoMatch';
+import { Layout } from './components/Layout';
+import { NavigationBar } from './components/NavigationBar';
 
-import './App.css';
-import Container from 'react-bootstrap/Container';
-import {BrowserRouter as Router, Route, Switch} from 'react-dom'
-import Home from './Components/Home'
-import Contact from './Components/Contact'
-import noMatch from './Components/Nomatch'
-import Aboutus from './Components/Aboutus'
 
+class App extends Component {
+  render() {
+    return (
+      <React.Fragment>
+        <Router>
+          <NavigationBar />
 
-
-function App() {
-  return (
-    <>
-    <Route>
-      <Switch>
-        <Route  exact path="/" component={Home}></Route>
-        <Route  path="/aboutuse" component={Aboutus}></Route>
-        <Route  path="/contact" component={Contact}></Route>
-        <Route  component={noMatch}></Route>
-      </Switch>
-    </Route>
-
-    </>
-  );
+          <Layout>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/about" component={About} />
+              <Route path="/contact" component={Contact} />
+              <Route component={NoMatch} />
+            </Switch>
+          </Layout>
+        </Router>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
