@@ -12,8 +12,7 @@ export const Home = () => {
     }
 
     .description {
-        font-size: 15px;
-        
+    font-size: 15px; 
     }
 
     
