@@ -1,11 +1,9 @@
 import App from '../App'
 import {LocationDisplay} from '../App'
-import { fireEvent, render, screen, userEvent } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import { createMemoryHistory } from 'history'
 import React from 'react'
-import { Router , unmountComponentAtNode, BrowserRouter} from 'react-router-dom'
-import { act } from 'react-dom/test-utils';
-import { MemoryRouter } from "react-router-dom";
+import { Router ,  BrowserRouter} from 'react-router-dom'
 import '@testing-library/jest-dom/extend-expect'
 
 
@@ -24,7 +22,7 @@ describe("testing: Website", () => {
           expect(description).toBeDefined()
       })
 
-      test('full app rendering/navigating', () => {
+      test('full app rendering', () => {
           const history = createMemoryHistory()
           render(
             <Router history={history}>
@@ -57,20 +55,23 @@ describe("testing: Website", () => {
         expect(screen.getByTestId('location-display')).toHaveTextContent(route)
       })
 
+
+
+
       const renderWithRouter = (ui, { route = '/' } = {}) => {
         window.history.pushState({}, 'Test page', route)
       
         return render(ui, { wrapper: BrowserRouter })
       }
 
-      test('landingfrrfr on a bad page', () => {
+
+
+      test('landing on a bad page', () => {
         renderWithRouter(<App />, { route: '/something-that-does-not-match' })
       
         expect(screen.getByText(/page not found!/i)).toBeInTheDocument()
       })
      
-
-
 
 
       test("navigates home when you click the logo", async() => {
