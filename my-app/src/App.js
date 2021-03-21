@@ -7,14 +7,14 @@ import { NoMatch } from './NoMatch';
 import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
 import {Jumbotron} from './components/Jumbotron'
-
+import { createBrowserHistory } from 'history'
 
 export const LocationDisplay = () => {
   const location = useLocation()
 
   return <div data-testid="location-display">{location.pathname}</div>
 }
-
+const newHistory = createBrowserHistory();
 
 class App extends Component {
   
@@ -24,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Router>
+        <Router  history={newHistory}>
           <NavigationBar />
           <Jumbotron/>
           <Layout>
@@ -34,6 +34,7 @@ class App extends Component {
               <Route path="/contact" component={Contact} />
               <Route component={NoMatch} />
             </Switch>
+            <LocationDisplay />
           </Layout>
         </Router>
       </React.Fragment>

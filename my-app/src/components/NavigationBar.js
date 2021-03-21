@@ -22,13 +22,13 @@ export const NavigationBar = () => {
    return (
     <Styles>
     <Navbar expand="lg">
-      <Navbar.Brand href="/">Dental clinic - DENTIX</Navbar.Brand>
+      <Navbar.Brand data-testid="logo" href="/">Dental clinic - DENTIX</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item>
             <Nav.Link>
-              <Link to="/">Home</Link>
+              <Link to="/" data-testid="home">Home</Link>
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>

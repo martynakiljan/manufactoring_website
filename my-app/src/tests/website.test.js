@@ -3,14 +3,15 @@ import {LocationDisplay} from '../App'
 import { fireEvent, render, screen, userEvent } from "@testing-library/react";
 import { createMemoryHistory } from 'history'
 import React from 'react'
-import { Router } from 'react-router-dom'
-
+import { Router , unmountComponentAtNode, BrowserRouter} from 'react-router-dom'
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter } from "react-router-dom";
 import '@testing-library/jest-dom/extend-expect'
-import { NavigationBar } from '../components/NavigationBar';
+
 
 
 describe("testing: Website", () => {
-
+ 
       test('check if the title is found', async () => {
           const { container } = render(<App />)
           const title = container.querySelector('title')
@@ -34,6 +35,7 @@ describe("testing: Website", () => {
 
       })
 
+
       test('check if Dr. Frank appears after clicking on "about', () => {
         render (<App/>)
         const nav = screen.getByTestId('about')
@@ -41,22 +43,58 @@ describe("testing: Website", () => {
         expect(screen.getByText(/Dr Frank/i)).toBeInTheDocument()
       })
     
-      
-      
-      test('landing on a bad page', () => {
+
+      test('rendering a component that uses useLocation', () => {
         const history = createMemoryHistory()
-        history.push('/some/bad/route')
-        console.log(history)
+        const route = '/some-route'
+        history.push(route)
         render(
           <Router history={history}>
-            <NavigationBar />
+            <LocationDisplay />
           </Router>
         )
-        expect(screen.getByText(/Page not found!/i)).toBeInTheDocument()
+      
+        expect(screen.getByTestId('location-display')).toHaveTextContent(route)
       })
 
+      const renderWithRouter = (ui, { route = '/' } = {}) => {
+        window.history.pushState({}, 'Test page', route)
+      
+        return render(ui, { wrapper: BrowserRouter })
+      }
 
-   
+      test('landingfrrfr on a bad page', () => {
+        renderWithRouter(<App />, { route: '/something-that-does-not-match' })
+      
+        expect(screen.getByText(/page not found!/i)).toBeInTheDocument()
+      })
+     
 
 
+
+
+      test("navigates home when you click the logo", async() => {
+    
+        jest.setTimeout(5000)
+
+          render(
+            <BrowserRouter initialEntries={['/']}>
+              <App />
+            </BrowserRouter>,
+         
+          );
+          const HomeLink = screen.getByTestId('logo')
+          fireEvent.click(HomeLink)
+
+          expect(await screen.findByText(/home/i)).toBeInTheDocument()
+       
+          
+      });
+
+      
+     
+      
+      
+     
+      
 })
