@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/manufactoring_website/static/css/main.6dea0f05.chunk.css",
+    "main.js": "/manufactoring_website/static/js/main.4f508df1.chunk.js",
+    "main.js.map": "/manufactoring_website/static/js/main.4f508df1.chunk.js.map",
+    "runtime-main.js": "/manufactoring_website/static/js/runtime-main.3d61812a.js",
+    "runtime-main.js.map": "/manufactoring_website/static/js/runtime-main.3d61812a.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/manufactoring_website/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.9814e552.chunk.js": "/manufactoring_website/static/js/2.9814e552.chunk.js",
+    "static/js/2.9814e552.chunk.js.map": "/manufactoring_website/static/js/2.9814e552.chunk.js.map",
+    "static/js/3.b67c361d.chunk.js": "/manufactoring_website/static/js/3.b67c361d.chunk.js",
+    "static/js/3.b67c361d.chunk.js.map": "/manufactoring_website/static/js/3.b67c361d.chunk.js.map",
+    "index.html": "/manufactoring_website/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/manufactoring_website/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.6dea0f05.chunk.css.map": "/manufactoring_website/static/css/main.6dea0f05.chunk.css.map",
+    "static/js/2.9814e552.chunk.js.LICENSE.txt": "/manufactoring_website/static/js/2.9814e552.chunk.js.LICENSE.txt",
+    "static/media/img.b35c55e3.jpeg": "/manufactoring_website/static/media/img.b35c55e3.jpeg",
+    "static/media/img2.1f7f3ffc.jpeg": "/manufactoring_website/static/media/img2.1f7f3ffc.jpeg",
+    "static/media/img3.439d8a28.jpeg": "/manufactoring_website/static/media/img3.439d8a28.jpeg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3d61812a.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.9814e552.chunk.js",
+    "static/css/main.6dea0f05.chunk.css",
+    "static/js/main.4f508df1.chunk.js"
+  ]
+}
