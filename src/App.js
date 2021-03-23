@@ -9,6 +9,9 @@ import { NavigationBar } from './components/NavigationBar';
 import {Jumbotron} from './components/Jumbotron'
 import { createBrowserHistory } from 'history'
 
+
+
+
 export const LocationDisplay = () => {
   const location = useLocation()
 
@@ -17,7 +20,7 @@ export const LocationDisplay = () => {
 const newHistory = createBrowserHistory();
 
 class App extends Component {
-  
+
 
 
   
@@ -25,6 +28,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Router  history={newHistory}>
+        v{process.env.REACT_APP_VERSION}
           <NavigationBar />
           <Jumbotron/>
           <Layout>
