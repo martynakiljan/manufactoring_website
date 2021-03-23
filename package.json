@@ -1,4 +1,5 @@
 {
+  "homepage": "http://martynakiljan.github.io/manufactoring_website",
   "name": "my-app",
   "version": "1.0.1",
   "private": true,
@@ -20,7 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tag": "git push origin v$npm_package_version"
+    "tag": "git push origin v$npm_package_version",
+    "predeploy": "npm run build",
+    "deploy":  "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +45,7 @@
   },
   "devDependencies": {
     "@babel/preset-react": "^7.12.13",
-    "@testing-library/dom": "^7.30.0"
+    "@testing-library/dom": "^7.30.0",
+    "gh-pages": "^3.1.0"
   }
 }
