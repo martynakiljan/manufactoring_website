@@ -1,6 +1,6 @@
 {
   "homepage": "http://martynakiljan.github.io/manufactoring_website",
-  "name": "my-app",
+  "name": "manufactoring_website",
   "version": "1.0.1",
   "private": true,
   "dependencies": {
