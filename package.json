@@ -1,6 +1,6 @@
 {
   "homepage": ".",
-  "name": "manufactoring_website-netifly",
+  "name": "manufactoring_website",
   "version": "1.0.1",
   "private": true,
   "dependencies": {
