@@ -1,6 +1,6 @@
 {
-  "homepage": "http://martynakiljan.github.io/manufactoring_website",
-  "name": "manufactoring_website",
+  "homepage": ".",
+  "name": "manufactoring_website-netifly",
   "version": "1.0.1",
   "private": true,
   "dependencies": {
