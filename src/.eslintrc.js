@@ -1,8 +1,13 @@
 module.exports = {
-    "extends": "airbnb",
-    "parser": "babel-eslint",
-    "plugins": [
-        "react",
-        "babel"
-    ]
-};
+    parser: "babel-eslint",
+    parserOptions: {
+      sourceType: "module",
+      allowImportExportEverywhere: false,
+      ecmaFeatures: {
+        globalReturn: false,
+      },
+      babelOptions: {
+        configFile: "path/to/config.js",
+      },
+    },
+  };
