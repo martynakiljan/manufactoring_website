@@ -5,8 +5,8 @@ import { createMemoryHistory } from 'history'
 import React from 'react'
 import { Router ,  BrowserRouter} from 'react-router-dom'
 import '@testing-library/jest-dom/extend-expect'
-
-
+import { render } from 'react-dom'
+window.React = React
 
 describe("testing: Website", () => {
  

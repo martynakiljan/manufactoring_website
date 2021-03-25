@@ -8,7 +8,7 @@ import { Layout } from './components/Layout';
 import { NavigationBar } from './components/NavigationBar';
 import {Jumbotron} from './components/Jumbotron'
 import { createBrowserHistory } from 'history'
-
+import PrivatesRepo from './functions/PrivatesRepo'
 
 
 
@@ -31,6 +31,7 @@ class App extends Component {
         v{process.env.REACT_APP_VERSION}
           <NavigationBar />
           <Jumbotron/>
+          <PrivatesRepo/>
           <Layout>
             <Switch>
               <Route exact path="/" component={Home} />
