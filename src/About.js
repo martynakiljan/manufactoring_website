@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Col, Image} from 'react-bootstrap'
+import { Container, Col } from 'react-bootstrap'
 import styled from 'styled-components';
 import img2 from './images/img2.jpeg'
 import img3 from './images/img3.jpeg'

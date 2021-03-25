@@ -1,5 +1,5 @@
 import React from 'react'
-import {  Nav, Navbar, Container, Col } from 'react-bootstrap'
+import { Container, Col } from 'react-bootstrap'
 import styled from 'styled-components';
 
 export const Home = () => {
